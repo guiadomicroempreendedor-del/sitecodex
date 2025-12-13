@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LITECODE | Criação de Sites e Catálogos para MEI e Autônomos</title>
+    <meta name="description" content="Tenha um site profissional ou cardápio digital de alta conversão. Soluções rápidas para MEIs, restaurantes e prestadores de serviço em Goiânia." />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LITECODE - Sites que Vendem" />
+    <meta property="og:description" content="Destaque seu negócio com um site profissional. Ideal para MEIs e Autônomos." />
+    <meta property="og:image" content="https://picsum.photos/1200/630" />
+    <meta property="og:url" content="https://litecode.com.br" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LITECODE - Sites Profissionais" />
+    <meta name="twitter:description" content="Transforme visitantes em clientes com um site otimizado." />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              lite: {
+                dark: '#0a0e17', // Deep Blue Dark
+                metal: '#64748b', // Metallic Gray
+                neon: '#06b6d4',  // Cyan Neon
+                neonHover: '#22d3ee',
+                surface: '#1e293b',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              display: ['Rajdhani', 'sans-serif'], // Secondary font for Headings/UI
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Importing Inter and Rajdhani -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Inter', sans-serif; background-color: #0a0e17; color: #f8fafc; }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #0a0e17; }
+      ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #475569; }
+      
+      /* Hide scrollbar for carousel but keep functionality */
+      .hide-scroll::-webkit-scrollbar { display: none; }
+      .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfissionalService",
+      "name": "LITECODE",
+      "image": "https://picsum.photos/500/500",
+      "@id": "https://litecode.com.br",
+      "url": "https://litecode.com.br",
+      "telephone": "+5562995104781",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "AV. UBALDINA NAVES DE BRITO N°910",
+        "addressLocality": "BALNEÁRIO MEIA PONTE, GOIÂNIA",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "10:00",
+        "closes": "17:00"
+      },
+      "description": "Criação de sites de alta performance e catálogos digitais para MEIs e autônomos em Goiânia."
+    }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.2.7",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <!-- Vite Entry Point -->
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
