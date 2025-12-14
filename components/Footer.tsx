@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand & Social */}
           <div>
             <div className="font-display text-3xl font-bold text-white tracking-tight mb-6 uppercase">
-              LITE<span className="text-lite-neon">CODE</span>
+              LITE<span className="text-lite-neon">CODEX</span>
             </div>
             <p className="font-sans text-lite-metal mb-6 max-w-xs">
               Soluções digitais rápidas e eficientes para quem precisa vender hoje.
