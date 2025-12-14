@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://litecodex.litecodex.workers.dev/sitemap.xml
