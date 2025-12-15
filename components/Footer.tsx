@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand & Social */}
           <div>
             <div className="font-display text-3xl font-bold text-white tracking-tight mb-6 uppercase">
-              LITE<span className="text-lite-neon">CODEX</span>
+              SITE<span className="text-lite-neon">CODEX™</span>
             </div>
             <p className="font-sans text-lite-metal mb-6 max-w-xs">
               Soluções digitais rápidas e eficientes para quem precisa vender hoje.
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               aria-label="Siga no Instagram"
             >
               {ICONS.Instagram}
-              <span className="font-display font-bold tracking-wide">@litecode.br</span>
+              <span className="font-display font-bold tracking-wide">@sitecodex</span>
             </a>
           </div>
 
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-lite-surface pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-lite-metal/50 gap-4">
-          <p className="font-sans">&copy; {new Date().getFullYear()} LITECODEX. Todos os direitos reservados.</p>
+          <p className="font-sans">&copy; {new Date().getFullYear()} SITECODEX™. Todos os direitos reservados.</p>
           <div className="flex gap-4 font-sans">
             <span>Privacidade</span>
             <span>Termos</span>

@@ -2,8 +2,8 @@ import React from 'react';
 
 // Contact Info
 export const WHATSAPP_NUMBER = '5562995104781';
-export const WHATSAPP_MESSAGE = 'Olá, vim do site e gostaria de mais informações. Tenho interesse.';
-export const INSTAGRAM_URL = 'https://instagram.com'; // Placeholder
+export const WHATSAPP_MESSAGE = 'Olá, vim do seu site e gostaria de mais informações. Tenho interesse.';
+export const INSTAGRAM_URL = 'https://www.instagram.com/sitecodex/#'; // Placeholder
 export const ADDRESS_LINE_1 = 'AV. UBALDINA NAVES DE BRITO N°910';
 export const ADDRESS_LINE_2 = 'BALNEÁRIO MEIA PONTE, GOIÂNIA, GOIÁS';
 export const PHONE_DISPLAY = '+55 62 99510-4781';

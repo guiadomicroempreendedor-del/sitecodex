@@ -52,7 +52,7 @@ const Features: React.FC = () => {
             Pare de perder dinheiro.
           </h2>
           <p className="font-sans text-lite-metal max-w-2xl mx-auto">
-            A LITECODEX entrega a solução técnica para você focar apenas no seu negócio. 
+            A SITECODEX™ entrega a solução técnica para você focar apenas no seu negócio. 
             Sem mensalidades abusivas, sem código lento.
           </p>
         </div>

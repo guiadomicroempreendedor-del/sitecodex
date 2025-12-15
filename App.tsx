@@ -13,7 +13,7 @@ const App: React.FC = () => {
   
   // Basic console greeting
   useEffect(() => {
-    console.log("%c LITECODEX ", "background: #06b6d4; color: #0a0e17; font-weight: bold; padding: 4px; border-radius: 2px;");
+    console.log("%c SITECODEX™ ", "background: #06b6d4; color: #0a0e17; font-weight: bold; padding: 4px; border-radius: 2px;");
   }, []);
 
   return (

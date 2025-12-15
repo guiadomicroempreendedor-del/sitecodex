@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'bg-lite-dark/90 backdrop-blur-md py-3 shadow-lg' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="text-3xl font-display font-bold text-white tracking-tight cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-          LITE<span className="text-lite-neon">CODEX</span>
+          SITE<span className="text-lite-neon">CODEX™</span>
         </div>
         
         {/* Mobile-First: Hide nav links on small screens, show CTA */}
