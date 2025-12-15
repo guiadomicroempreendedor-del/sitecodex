@@ -75,7 +75,10 @@ const Portfolio: React.FC = () => {
       {/* Carousel Container */}
       <div 
         ref={scrollRef}
-        className="relative z-10 flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-[calc(50vw-400px)] pb-10 hide-scroll cursor-grab active:cursor-grabbing"
+        // Updated padding logic:
+        // px-6 on mobile for better side spacing
+        // md:px-[calc(50vw-200px)] centers the 400px wide card perfectly (50vw - half card width)
+        className="relative z-10 flex overflow-x-auto snap-x snap-mandatory gap-5 md:gap-8 px-6 md:px-[calc(50vw-200px)] pb-12 hide-scroll cursor-grab active:cursor-grabbing items-start"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
@@ -84,13 +87,20 @@ const Portfolio: React.FC = () => {
         {PORTFOLIO_ITEMS.map((item) => (
           <div 
             key={item.id}
-            className="flex-shrink-0 w-[85vw] md:w-[400px] snap-center relative group select-none"
+            // Updated width logic:
+            // w-[85vw]: Standard mobile peek
+            // sm:w-[350px]: Tablet fixed width
+            // md:w-[400px]: Desktop fixed width
+            className="flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center relative group select-none"
           >
             <a 
               href={item.projectUrl} 
               onClick={(e) => handleCardClick(e, item.projectUrl)}
-              className="block relative h-[500px] md:h-[600px]"
-              draggable="false" // Prevent native image dragging
+              // Updated height logic:
+              // Mobile: viewport based (65vh) but clamped between 420px and 550px
+              // Desktop: fixed 600px
+              className="block relative h-[65vh] min-h-[420px] max-h-[550px] md:min-h-[600px] md:max-h-[600px] md:h-[600px]"
+              draggable="false"
             >
               {/* Polygon Card */}
               <div 
@@ -148,13 +158,10 @@ const Portfolio: React.FC = () => {
             </a>
           </div>
         ))}
-        
-        {/* Spacer for right padding in scroll */}
-        <div className="w-4 flex-shrink-0" />
       </div>
 
       {/* Visual Indicator of swipe */}
-      <div className="flex justify-center gap-2 mt-4 relative z-10">
+      <div className="flex justify-center gap-2 mt-4 relative z-10 px-4 flex-wrap">
         {PORTFOLIO_ITEMS.map((_, idx) => (
           <div key={idx} className={`w-2 h-2 rounded-full transition-colors duration-300 ${imagesLoaded[idx + 1] ? 'bg-lite-neon/50' : 'bg-lite-metal/30'}`} />
         ))}
