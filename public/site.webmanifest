@@ -1,0 +1,21 @@
+{
+  "name": "Litecodex - Desenvolvimento Tech",
+  "short_name": "Litecodex",
+  "description": "Soluções inteligentes em desenvolvimento de sites, catálogos e sistemas avançados.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#00E5FF",
+  "background_color": "#0B1120",
+  "display": "standalone",
+  "start_url": "/"
+}
