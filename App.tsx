@@ -2,6 +2,7 @@ import React, { Suspense, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
 import Contact from './components/Contact';
@@ -22,8 +23,11 @@ const App: React.FC = () => {
       
       <main>
         <Hero />
+        
+        {/* Sales Copy Body */}
         <Features />
         
+        {/* Visual Break with Portfolio */}
         <Suspense fallback={
           <div className="h-96 flex items-center justify-center bg-[#0d121d]">
             <div className="w-8 h-8 border-4 border-lite-neon border-t-transparent rounded-full animate-spin"></div>
@@ -32,6 +36,10 @@ const App: React.FC = () => {
           <Portfolio />
         </Suspense>
 
+        {/* Pricing / Investment Section */}
+        <Pricing />
+
+        {/* Custom Form */}
         <Contact />
       </main>
 
