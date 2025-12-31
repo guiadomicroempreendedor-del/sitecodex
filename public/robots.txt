@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sitecodex.sitecodex.workers.dev/sitemap.xml
+Sitemap: https://sitecodex.com.br/sitemap.xml
