@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ICONS, ADDRESS_LINE_1, ADDRESS_LINE_2, PHONE_DISPLAY, INSTAGRAM_URL } from '../constants';
 
 const Footer: React.FC = () => {
@@ -47,8 +48,8 @@ const Footer: React.FC = () => {
         <div className="border-t border-lite-surface pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-lite-metal/50 gap-4">
           <p className="font-sans">&copy; {new Date().getFullYear()} SITECODEX™. Todos os direitos reservados.</p>
           <div className="flex gap-4 font-sans">
-            <span>Privacidade</span>
-            <span>Termos</span>
+            <Link to="/politica-privacidade" className="hover:text-lite-neon transition-colors">Privacidade</Link>
+            <Link to="/termos-de-uso" className="hover:text-lite-neon transition-colors">Termos</Link>
           </div>
         </div>
       </div>

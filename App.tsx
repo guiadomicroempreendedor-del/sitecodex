@@ -1,14 +1,20 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Pricing from './components/Pricing';
 import Footer from './components/Footer';
 import FloatingCTA from './components/FloatingCTA';
-import Contact from './components/Contact';
+import Home from './components/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfUse from './components/TermsOfUse';
 
-// Lazy load Portfolio for performance improvement
-const Portfolio = React.lazy(() => import('./components/Portfolio'));
+// Helper component to scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
 
 const App: React.FC = () => {
   
@@ -18,34 +24,23 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-lite-dark text-slate-100 font-sans selection:bg-lite-neon selection:text-lite-dark">
-      <Header />
-      
-      <main>
-        <Hero />
+    <Router>
+      <ScrollToTop />
+      <div className="min-h-screen bg-lite-dark text-slate-100 font-sans selection:bg-lite-neon selection:text-lite-dark flex flex-col">
+        <Header />
         
-        {/* Sales Copy Body */}
-        <Features />
-        
-        {/* Visual Break with Portfolio */}
-        <Suspense fallback={
-          <div className="h-96 flex items-center justify-center bg-[#0d121d]">
-            <div className="w-8 h-8 border-4 border-lite-neon border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        }>
-          <Portfolio />
-        </Suspense>
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/politica-privacidade" element={<PrivacyPolicy />} />
+            <Route path="/termos-de-uso" element={<TermsOfUse />} />
+          </Routes>
+        </main>
 
-        {/* Pricing / Investment Section */}
-        <Pricing />
-
-        {/* Custom Form */}
-        <Contact />
-      </main>
-
-      <Footer />
-      <FloatingCTA />
-    </div>
+        <Footer />
+        <FloatingCTA />
+      </div>
+    </Router>
   );
 };
 
